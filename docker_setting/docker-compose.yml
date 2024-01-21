@@ -1,0 +1,22 @@
+services:
+  video-nlp:
+    image: "multi-vid-sum-eval"
+    build: .
+    volumes:
+      - type: bind
+        source: ""
+        target: "/code_public"
+      - type: bind
+        source: ""
+        target: "/work"
+    tty: true
+    shm_size: '8gb'
+    environment:
+      HOST_USERNAME: ${USER}
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids: ['0']
+              capabilities: [gpu]

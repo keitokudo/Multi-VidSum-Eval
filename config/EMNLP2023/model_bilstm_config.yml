@@ -1,0 +1,21 @@
+model:
+  net_params:
+    resnet_input_dim: 2048
+    bni_input_dim: 1024
+    d_model: 1024
+    d_linear: 512
+    d_hidden: 256
+    use_feat: concat
+    
+    artchitecture: lstm
+    bidirectinal: true
+
+  language_model:
+    bert_config: bert-base-uncased
+    use_feat: mean
+    d_hidden: 768
+    update_params: false
+
+  
+criterion:
+    criterion: "BCEWithLogitsLoss"

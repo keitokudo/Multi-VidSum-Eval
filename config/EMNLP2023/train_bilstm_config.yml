@@ -1,0 +1,32 @@
+optimizer:
+    optimizer: "adam"
+    params:
+        lr: 0.0001
+
+model_checkpoint:
+    save_interval: 5
+    n_saved: 1
+
+max_epochs: 20
+use_model: last
+
+batchsize: 16
+
+dataset_file: /work/downloads/data/fixed_preprocessed_sentenceanno_result_allin.sort_sid.trimed.tsv
+
+feature_root: /work/downloads/data/features
+frame_match_feature_root: /work/downloads/data/centerized_features
+
+dur_file: /work/downloads/data/anet_duration_frame.csv
+
+save_dir:
+    model_dir: "models"
+    tensorboard_dir: "runs"
+    log_dir: "logs"
+    eval_dir: "eval"
+
+label_offset: 0
+
+is_sampling: true
+
+movie_root: ""

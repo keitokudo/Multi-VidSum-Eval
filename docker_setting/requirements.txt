@@ -1,2 +1,0 @@
-logzero==1.7.0
-transformers==4.20.1

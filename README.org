@@ -17,7 +17,7 @@ docker exec -it $container_name bash
 *** Download resources for evaluation
 #+BEGIN_SRC sh
 cd /work
-huggingface-cli download shirayukikun/multi-vidsum-eval --local-dir . --local-dir-use-symlinks False --repo-type dataset
+huggingface-cli download tohoku-nlp/multi-vidsum-eval --local-dir . --local-dir-use-symlinks False --repo-type dataset
 tar -xzvf downloads.tar.gz --no-same-owner
 #+END_SRC
 
